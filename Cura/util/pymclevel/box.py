@@ -1,6 +1,7 @@
 from collections import namedtuple
 import itertools
 
+
 _Vector = namedtuple("_Vector", ("x", "y", "z"))
 
 class Vector(_Vector):

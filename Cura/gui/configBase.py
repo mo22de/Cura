@@ -1,11 +1,16 @@
 from __future__ import division
+
+import types
+import wx
+from wx.lib.agw import floatspin
+import wx.lib.stattext
+
+from Cura.util import profile, validators
+
+
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
-import wx, wx.lib.stattext, types
-from wx.lib.agw import floatspin
 
-from Cura.util import validators
-from Cura.util import profile
 
 class configPanelBase(wx.Panel):
 	"A base class for configuration dialogs. Handles creation of settings, and popups"

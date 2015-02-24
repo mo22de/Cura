@@ -1,12 +1,15 @@
 from datetime import datetime
 import logging
+import numpy
+
+from box import BoundingBox, Vector
+from entity import Entity, TileEntity
+import materials
+from mclevelbase import exhaust
+
+
 log = logging.getLogger(__name__)
 
-import numpy
-from box import BoundingBox, Vector
-from mclevelbase import exhaust
-import materials
-from entity import Entity, TileEntity
 
 
 def convertBlocks(destLevel, sourceLevel, blocks, blockData):

@@ -1,14 +1,11 @@
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
-import wx
 import os
+import wx
 
-from Cura.gui import configWizard
-from Cura.gui import configBase
-from Cura.util import machineCom
-from Cura.util import profile
-from Cura.util import pluginInfo
-from Cura.util import resources
+from Cura.gui import configBase, configWizard
+from Cura.util import machineCom, pluginInfo, profile, resources
+
 
 class preferencesDialog(wx.Dialog):
 	def __init__(self, parent):

@@ -1,18 +1,19 @@
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
-import wx
-import numpy
-import math
-import threading
-
 import OpenGL
-OpenGL.ERROR_CHECKING = False
-from OpenGL.GLU import *
 from OpenGL.GL import *
+from OpenGL.GLU import *
+import math
+import numpy
+import threading
+import wx
 
+from Cura.gui.util import openglGui, openglHelpers
 from Cura.util import profile
-from Cura.gui.util import openglHelpers
-from Cura.gui.util import openglGui
+
+
+OpenGL.ERROR_CHECKING = False
+
 
 class engineResultView(object):
 	def __init__(self, parent):

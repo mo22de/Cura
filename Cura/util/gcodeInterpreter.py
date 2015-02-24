@@ -4,15 +4,16 @@ It does this by parsing the whole GCode file. On large files this can take a whi
 """
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
-import sys
 import math
-import os
-import time
 import numpy
+import os
+import sys
+import time
 import types
-import cStringIO as StringIO
 
 from Cura.util import profile
+import cStringIO as StringIO
+
 
 def gcodePath(newType, pathType, layerThickness, startPoint):
 	"""

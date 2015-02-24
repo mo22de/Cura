@@ -1,14 +1,14 @@
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
-import os
 import glob
-import subprocess
+import os
 import platform
-
+import subprocess
 import wx
 
 from Cura.util import profile
 from Cura.util.resources import getPathForImage
+
 
 try:
 	#Try to find the OpenCV library for video capture.

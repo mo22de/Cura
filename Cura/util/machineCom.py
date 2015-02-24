@@ -4,24 +4,21 @@ For actual printing of objects this module is used from Cura.serialCommunication
 """
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
-import os
 import glob
-import sys
-import time
 import math
-import re
-import traceback
-import threading
+import os
 import platform
+import re
+import serial
+import sys
+import threading
+import time
+import traceback
+
+from Cura.avr_isp import ispBase, stk500v2
+from Cura.util import profile, version
 import Queue as queue
 
-import serial
-
-from Cura.avr_isp import stk500v2
-from Cura.avr_isp import ispBase
-
-from Cura.util import profile
-from Cura.util import version
 
 try:
 	import _winreg

@@ -6,8 +6,9 @@ Created on Jul 22, 2011
 
 from contextlib import contextmanager
 from logging import getLogger
-import sys
 import os
+import sys
+
 
 log = getLogger(__name__)
 

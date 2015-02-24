@@ -12,12 +12,13 @@ http://en.wikipedia.org/wiki/STL_(file_format)
 """
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
-import sys
 import os
 import struct
+import sys
 import time
 
 from Cura.util import printableObject
+
 
 def _loadAscii(m, f):
 	cnt = 0

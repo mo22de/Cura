@@ -1,13 +1,12 @@
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
-import wx
 import os
 import webbrowser
+import wx
 from wx.lib import scrolledpanel
 
-from Cura.util import profile
-from Cura.util import pluginInfo
-from Cura.util import explorer
+from Cura.util import explorer, pluginInfo, profile
+
 
 class ListBoxEnh(wx.ListBox):
 	def GetValue(self):

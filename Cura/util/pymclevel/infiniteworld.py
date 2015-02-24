@@ -9,27 +9,30 @@ from datetime import datetime
 import itertools
 from logging import getLogger
 from math import floor
+from numpy import array, clip, maximum, zeros
 import os
-import re
 import random
+import re
 import shutil
 import struct
+import sys
 import time
 import traceback
 import weakref
 import zlib
-import sys
 
 import blockrotation
 from box import BoundingBox
 from entity import Entity, TileEntity
-from faces import FaceXDecreasing, FaceXIncreasing, FaceZDecreasing, FaceZIncreasing
-from level import LightedChunk, EntityLevel, computeChunkHeightMap, MCLevel, ChunkBase
+from faces import FaceXDecreasing, FaceXIncreasing, FaceZDecreasing, \
+    FaceZIncreasing
+from level import LightedChunk, EntityLevel, computeChunkHeightMap, MCLevel, \
+    ChunkBase
 from materials import alphaMaterials
 from mclevelbase import ChunkMalformed, ChunkNotPresent, exhaust, PlayerNotFound
 import nbt
-from numpy import array, clip, maximum, zeros
 from regionfile import MCRegionFile
+
 
 log = getLogger(__name__)
 

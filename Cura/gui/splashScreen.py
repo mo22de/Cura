@@ -4,6 +4,7 @@ import wx._core #We only need the core here, which speeds up the import. As we w
 
 from Cura.util.resources import getPathForImage
 
+
 class splashScreen(wx.SplashScreen):
 	def __init__(self, callback):
 		self.callback = callback

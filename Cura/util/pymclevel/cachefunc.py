@@ -1,8 +1,8 @@
 # From http://code.activestate.com/recipes/498245/
 import collections
 import functools
-from itertools import ifilterfalse
 from heapq import nsmallest
+from itertools import ifilterfalse
 from operator import itemgetter
 
 

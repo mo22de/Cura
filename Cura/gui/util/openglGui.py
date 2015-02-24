@@ -1,19 +1,23 @@
 from __future__ import division
+
+import OpenGL
+from OpenGL.GL import *
+import os
+import sys
+import time
+import traceback
+from wx import glcanvas
+import wx
+
+from Cura.gui.util import openglHelpers
+from Cura.util import version
+
+
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
-import wx
-import traceback
-import sys
-import os
-import time
 
-from wx import glcanvas
-import OpenGL
 OpenGL.ERROR_CHECKING = False
-from OpenGL.GL import *
 
-from Cura.util import version
-from Cura.gui.util import openglHelpers
 
 class animation(object):
 	def __init__(self, gui, start, end, runTime):

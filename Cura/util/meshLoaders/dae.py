@@ -7,10 +7,11 @@ http://en.wikipedia.org/wiki/COLLADA
 """
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
-from  xml.parsers.expat import ParserCreate
 import os
+from xml.parsers.expat import ParserCreate
 
 from Cura.util import printableObject
+
 
 def loadScene(filename):
 	loader = daeLoader(filename)

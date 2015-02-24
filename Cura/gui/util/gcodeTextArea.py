@@ -1,10 +1,11 @@
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
+import sys
 import wx
 import wx.stc
-import sys
 
 from Cura.util import profile
+
 
 class GcodeTextArea(wx.stc.StyledTextCtrl):
 	def __init__(self, parent):

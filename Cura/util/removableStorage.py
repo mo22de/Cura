@@ -6,20 +6,23 @@ This is OS depended.
 	On Linux it looks for anything mounted in /media/
 """
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
-import platform
-import string
 import glob
 import os
+import platform
 import stat
-import time
+import string
 import subprocess
 import threading
+import time
+
+from Cura.util import profile
+
+
 try:
 	from xml.etree import cElementTree as ElementTree
 except:
 	from xml.etree import ElementTree
 
-from Cura.util import profile
 
 _removableCacheUpdateThread = None
 _removableCache = []

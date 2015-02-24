@@ -5,6 +5,7 @@ import wx
 from Cura.gui import configBase
 from Cura.util import profile
 
+
 class expertConfigWindow(wx.Dialog):
 	"Expert configuration window"
 	def _addSettingsToPanels(self, category, sub_category, left, right):

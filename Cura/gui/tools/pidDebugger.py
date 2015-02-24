@@ -1,9 +1,10 @@
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
-import wx
 import time
+import wx
 
 from Cura.util import machineCom
+
 
 class debuggerWindow(wx.Frame):
 	def __init__(self, parent):

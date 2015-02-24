@@ -1,11 +1,12 @@
 import logging
+from numpy import fromstring
 import os
 import struct
 import zlib
 
-from numpy import fromstring
 from mclevelbase import notclosing, RegionMalformed, ChunkNotPresent
 import nbt
+
 
 log = logging.getLogger(__name__)
 

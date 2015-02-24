@@ -6,10 +6,8 @@ __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AG
 
 import os
 
-from Cura.util.meshLoaders import stl
-from Cura.util.meshLoaders import obj
-from Cura.util.meshLoaders import dae
-from Cura.util.meshLoaders import amf
+from Cura.util.meshLoaders import amf, dae, obj, stl
+
 
 def loadSupportedExtensions():
 	""" return a list of supported file extensions for loading. """

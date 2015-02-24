@@ -170,18 +170,20 @@ def fillBlocks(self, box, blockType, blockData = 0):
 Copyright 2010 David Rio Vierra
 """
 
+from logging import getLogger
+from numpy import fromstring
+import os
+import sys
+import traceback
+
 from indev import MCIndevLevel
 from infiniteworld import MCInfdevOldLevel
 from java import MCJavaLevel
-from logging import getLogger
 from mclevelbase import saveFileDir
 import nbt
-from numpy import fromstring
-import os
 from pocket import PocketWorld
 from schematic import INVEditChest, MCSchematic, ZipSchematic
-import sys
-import traceback
+
 
 log = getLogger(__name__)
 

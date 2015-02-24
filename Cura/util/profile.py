@@ -3,30 +3,33 @@ The profile module contains all the settings for Cura.
 These settings can be globally accessed and modified.
 """
 from __future__ import division
+
+import base64
+import glob
+import math
+import numpy
+import os
+import platform
+import re
+import stat
+import string
+import sys
+import time
+import traceback
+import types
+import zlib
+
+from Cura.util import validators, version
+import cPickle as pickle
+
+
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
-import os
-import traceback
-import math
-import re
-import zlib
-import base64
-import time
-import sys
-import platform
-import glob
-import string
-import stat
-import types
-import cPickle as pickle
-import numpy
 if sys.version_info[0] < 3:
 	import ConfigParser
 else:
 	import configparser as ConfigParser
 
-from Cura.util import version
-from Cura.util import validators
 
 #The settings dictionary contains a key/value reference to all possible settings. With the setting name as key.
 settingsDictionary = {}
@@ -495,7 +498,10 @@ def _getMyDocumentsFolder():
 		path = os.path.expanduser('~/')
 	if not os.path.exists(path):
 		path = ''
-
+	try:
+		path = unicode(path)
+	except UnicodeDecodeError:
+		path = ''
 	return path
 
 setting('sdcard_rootfolder', _getMyDocumentsFolder(), str, 'preference', 'hidden').setLabel(_("Base folder to replicate on SD card"), _("The specified folder will be used as a base path. Any gcode generated from object coming from within that folder will be automatically saved on the SD card at the same sub-folder. Any object coming from outside of this path will save the gcode on the root folder of the card."))

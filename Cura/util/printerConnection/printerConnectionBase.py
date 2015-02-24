@@ -6,6 +6,7 @@ __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AG
 
 import traceback
 
+
 class printerConnectionGroup(object):
 	"""
 	Base for the printer connection group, needs to be subclassed.

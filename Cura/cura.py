@@ -12,6 +12,7 @@ from optparse import OptionParser
 
 from Cura.util import profile
 
+
 def main():
 	"""
 	Main Cura entry point. Parses arguments, and starts GUI or slicing process depending on the arguments.

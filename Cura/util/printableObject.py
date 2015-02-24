@@ -5,14 +5,16 @@ A single object can have 1 or more meshes which represent different sections for
 """
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
-import time
 import math
-import os
-
 import numpy
-numpy.seterr(all='ignore')
+import os
+import time
 
 from Cura.util import polygon
+
+
+numpy.seterr(all='ignore')
+
 
 class printableObject(object):
 	"""

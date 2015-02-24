@@ -1,15 +1,17 @@
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
-import math
-import wx
-import numpy
-
 import OpenGL
-OpenGL.ERROR_CHECKING = False
-from OpenGL.GLU import *
 from OpenGL.GL import *
+from OpenGL.GLU import *
+import math
+import numpy
+import wx
 
 from Cura.gui.util import openglHelpers
+
+
+OpenGL.ERROR_CHECKING = False
+
 #TODO: Rename these. Name is vague.
 class toolNone(object):
 	def __init__(self, parent):

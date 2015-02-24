@@ -5,15 +5,15 @@ It keeps track of a list of installed plugins and the information contained with
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
 import os
-import sys
-import traceback
 import platform
 import re
+import sys
 import tempfile
+import traceback
+
+from Cura.util import profile, resources
 import cPickle as pickle
 
-from Cura.util import profile
-from Cura.util import resources
 
 _pluginList = None
 

@@ -8,10 +8,13 @@ There are 3 possible outcomes:
 	Error	- The value is not a proper number, out of range, or some other way wrong.
 """
 from __future__ import division
+
+import math
+import types
+
+
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
-import types
-import math
 
 SUCCESS = 0
 WARNING = 1

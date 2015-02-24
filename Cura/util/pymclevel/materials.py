@@ -1,12 +1,15 @@
 
+from collections import defaultdict
 from logging import getLogger
 from numpy import zeros, rollaxis, indices
-import traceback
-from os.path import join
-from collections import defaultdict
-from pprint import pformat
-
 import os
+from os.path import join
+from pprint import pformat
+import traceback
+
+from faces import FaceXDecreasing, FaceXIncreasing, FaceYIncreasing, \
+    FaceZDecreasing, FaceZIncreasing
+
 
 NOTEX = (0x90, 0xD0)
 
@@ -305,7 +308,6 @@ HugeMushroomTypes = {
    "Stem": 10,
    "Top": 5,
 }
-from faces import FaceXDecreasing, FaceXIncreasing, FaceYIncreasing, FaceZDecreasing, FaceZIncreasing
 
 Red = (0xD0, 0x70)
 Brown = (0xE0, 0x70)

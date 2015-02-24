@@ -5,9 +5,11 @@ This module handles all communication with the YouMagine API.
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
 import json
-import httplib as httpclient
-import urllib
 import textwrap
+import urllib
+
+import httplib as httpclient
+
 
 class httpUploadDataStream(object):
 	"""

@@ -5,11 +5,11 @@ This is because the resource location is depended on the packaging method and OS
 """
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
+import gettext
+import glob
 import os
 import sys
-import glob
 
-import gettext
 
 if sys.platform.startswith('darwin'):
 	try:
@@ -48,6 +48,24 @@ def getPathForFirmware(name):
 def getDefaultMachineProfiles():
 	path = os.path.normpath(os.path.join(resourceBasePath, 'machine_profiles', '*.ini'))
 	return glob.glob(path)
+
+def getAllsparkModeProfiles():
+	path = os.path.normpath(os.path.join(resourceBasePath, 'quickprint', 'profiles', '*.ini'))
+	user_path = os.path.normpath(os.path.expanduser(os.path.join('~', '.Cura', 'quickprint', 'profiles')))
+	if os.path.isdir(user_path):
+		files = sorted(glob.glob(os.path.join(user_path, '*.ini')))
+		if len(files) > 0:
+			return files
+	return sorted(glob.glob(path))
+
+def getAllsparkModeMaterials():
+	path = os.path.normpath(os.path.join(resourceBasePath, 'quickprint', 'materials', '*.ini'))
+	user_path = os.path.normpath(os.path.expanduser(os.path.join('~', '.Cura', 'quickprint', 'materials')))
+	if os.path.isdir(user_path):
+		files = sorted(glob.glob(os.path.join(user_path, '*.ini')))
+		if len(files) > 0:
+			return files
+	return sorted(glob.glob(path))
 
 def getSimpleModeProfiles():
 	path = os.path.normpath(os.path.join(resourceBasePath, 'quickprint', 'profiles', '*.ini'))

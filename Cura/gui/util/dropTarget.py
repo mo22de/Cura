@@ -2,6 +2,7 @@ __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AG
 
 import wx
 
+
 # Define File Drop Target class
 class FileDropTarget(wx.FileDropTarget):
 	def __init__(self, callback, filenameFilter = None):

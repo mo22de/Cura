@@ -8,11 +8,13 @@ __all__ = ["MCJavaLevel"]
 
 from cStringIO import StringIO
 import gzip
-from level import MCLevel
 from logging import getLogger
 from numpy import fromstring
 import os
 import re
+
+from level import MCLevel
+
 
 log = getLogger(__name__)
 

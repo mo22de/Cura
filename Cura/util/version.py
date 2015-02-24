@@ -5,16 +5,19 @@ It can also see if we are running a development build of Cura.
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
 import os
-import sys
-import urllib2
 import platform
 import subprocess
+import sys
+import urllib2
+
+from Cura.util import resources
+
+
 try:
 	from xml.etree import cElementTree as ElementTree
 except:
 	from xml.etree import ElementTree
 
-from Cura.util import resources
 
 def getVersion(getGitVersion = True):
 	gitPath = os.path.abspath(os.path.join(os.path.split(os.path.abspath(__file__))[0], "../.."))

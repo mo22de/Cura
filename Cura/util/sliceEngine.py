@@ -3,27 +3,25 @@ Slice engine communication.
 This module handles all communication with the slicing engine.
 """
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
-import subprocess
-import time
+import errno
+import hashlib
+import inspect
 import math
 import numpy
 import os
-import threading
-import traceback
 import platform
-import urllib
-import urllib2
-import hashlib
 import socket
 import struct
-import errno
-import inspect
+import subprocess
+import threading
+import time
+import traceback
+import urllib
+import urllib2
 
+from Cura.util import gcodeInterpreter, pluginInfo, profile, version
 from Cura.util.bigDataStorage import BigDataStorage
-from Cura.util import profile
-from Cura.util import pluginInfo
-from Cura.util import version
-from Cura.util import gcodeInterpreter
+
 
 def getEngineFilename():
 	"""

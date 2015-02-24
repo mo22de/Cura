@@ -7,16 +7,18 @@ http://en.wikipedia.org/wiki/Additive_Manufacturing_File_Format
 """
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
-import cStringIO as StringIO
-import zipfile
 import os
+import zipfile
+
+from Cura.util import printableObject, profile
+import cStringIO as StringIO
+
+
 try:
 	from xml.etree import cElementTree as ElementTree
 except:
 	from xml.etree import ElementTree
 
-from Cura.util import printableObject
-from Cura.util import profile
 
 def loadScene(filename):
 	try:

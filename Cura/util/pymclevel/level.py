@@ -4,18 +4,20 @@ Created on Jul 22, 2011
 @author: Rio
 '''
 
-import blockrotation
-from box import BoundingBox
 from collections import defaultdict
-from entity import Entity, TileEntity
 import itertools
 from logging import getLogger
-import materials
 from math import floor
-from mclevelbase import ChunkMalformed, ChunkNotPresent, exhaust
-import nbt
 from numpy import argmax, swapaxes, zeros, zeros_like
 import os.path
+
+import blockrotation
+from box import BoundingBox
+from entity import Entity, TileEntity
+import materials
+from mclevelbase import ChunkMalformed, ChunkNotPresent, exhaust
+import nbt
+
 
 log = getLogger(__name__)
 

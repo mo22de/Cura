@@ -4,13 +4,14 @@ This connection can then be used to send GCode to the printer.
 """
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
-import threading
 import json
-import httplib as httpclient
-import urllib
+import threading
 import time
+import urllib
 
 from Cura.util.printerConnection import printerConnectionBase
+import httplib as httpclient
+
 
 class doodle3dConnectionGroup(printerConnectionBase.printerConnectionGroup):
 	"""

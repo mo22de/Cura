@@ -8,6 +8,7 @@ __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AG
 
 import math
 
+
 class Vector3(object):
 	""" 3D vector object. """
 	def __init__(self, x=0.0, y=0.0, z=0.0):

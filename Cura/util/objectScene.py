@@ -5,11 +5,11 @@ this class contains a group of printableObjects that are located on the build pl
 The objectScene handles the printing order of these objects, and if they collide.
 """
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
-import random
 import numpy
+import random
 
-from Cura.util import profile
-from Cura.util import polygon
+from Cura.util import polygon, profile
+
 
 class _objectOrder(object):
 	"""

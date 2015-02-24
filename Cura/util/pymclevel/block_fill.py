@@ -1,11 +1,14 @@
 import logging
-log = logging.getLogger(__name__)
-
 import numpy
 
-from mclevelbase import exhaust
 import blockrotation
 from entity import TileEntity
+from mclevelbase import exhaust
+
+
+log = logging.getLogger(__name__)
+
+
 
 def blockReplaceTable(blocksToReplace):
     blocktable = numpy.zeros((256, 16), dtype='bool')

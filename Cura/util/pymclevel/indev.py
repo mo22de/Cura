@@ -59,13 +59,15 @@ TAG_Compound "MinecraftLevel"
 }
 """
 
-from entity import TileEntity
-from level import MCLevel
 from logging import getLogger
-from materials import indevMaterials
 from numpy import array, swapaxes
-import nbt
 import os
+
+from entity import TileEntity
+from level import EntityLevel, MCLevel
+from materials import indevMaterials
+import nbt
+
 
 log = getLogger(__name__)
 
@@ -90,7 +92,6 @@ Spawn = "Spawn"
 
 __all__ = ["MCIndevLevel"]
 
-from level import EntityLevel
 
 
 class MCIndevLevel(EntityLevel):

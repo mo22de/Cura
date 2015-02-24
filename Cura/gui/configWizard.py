@@ -1,20 +1,15 @@
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
+import math
 import os
-import webbrowser
 import threading
 import time
-import math
-
+import webbrowser
 import wx
 import wx.wizard
 
-from Cura.gui import firmwareInstall
-from Cura.gui import printWindow
-from Cura.util import machineCom
-from Cura.util import profile
-from Cura.util import gcodeGenerator
-from Cura.util import resources
+from Cura.gui import firmwareInstall, printWindow
+from Cura.util import gcodeGenerator, machineCom, profile, resources
 
 
 class InfoBox(wx.Panel):

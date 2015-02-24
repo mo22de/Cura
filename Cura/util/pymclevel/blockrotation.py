@@ -1,5 +1,6 @@
-from materials import alphaMaterials
 from numpy import arange, zeros
+
+from materials import alphaMaterials
 
 
 def genericVerticalFlip(cls):

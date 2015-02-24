@@ -8,7 +8,9 @@ http://en.wikipedia.org/wiki/Wavefront_.obj_file
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
 import os
+
 from Cura.util import printableObject
+
 
 def loadScene(filename):
 	obj = printableObject.printableObject(filename)

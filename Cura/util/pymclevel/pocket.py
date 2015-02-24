@@ -1,14 +1,16 @@
-from level import FakeChunk
 import logging
-from materials import pocketMaterials
-from mclevelbase import ChunkNotPresent, notclosing
-from nbt import TAG_List
 from numpy import array, fromstring, zeros
 import os
 import struct
 
-# values are usually little-endian, unlike Minecraft PC
+from infiniteworld import ChunkedLevelMixin
+from level import FakeChunk, MCLevel, LightedChunk
+from materials import pocketMaterials
+from mclevelbase import ChunkNotPresent, notclosing
+from nbt import TAG_List
 
+
+# values are usually little-endian, unlike Minecraft PC
 logger = logging.getLogger(__file__)
 
 
@@ -292,8 +294,6 @@ class PocketChunksFile(object):
         coords = ((i % 32, i // 32) for i in indexes)
         return coords
 
-from infiniteworld import ChunkedLevelMixin
-from level import MCLevel, LightedChunk
 
 
 class PocketWorld(ChunkedLevelMixin, MCLevel):

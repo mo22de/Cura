@@ -3,10 +3,11 @@ Created on Jul 23, 2011
 
 @author: Rio
 '''
+from copy import deepcopy
 from math import isnan
 
 import nbt
-from copy import deepcopy
+
 
 __all__ = ["Entity", "TileEntity"]
 

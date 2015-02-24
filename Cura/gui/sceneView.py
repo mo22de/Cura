@@ -1,36 +1,29 @@
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
-import wx
-import numpy
-import time
-import os
-import traceback
-import threading
-import math
-import sys
-import cStringIO as StringIO
-
 import OpenGL
-OpenGL.ERROR_CHECKING = False
-from OpenGL.GLU import *
 from OpenGL.GL import *
+from OpenGL.GLU import *
+import math
+import numpy
+import os
+import sys
+import threading
+import time
+import traceback
+import wx
 
 from Cura.gui import printWindow
-from Cura.util import profile
-from Cura.util import meshLoader
-from Cura.util import objectScene
-from Cura.util import resources
-from Cura.util import sliceEngine
-from Cura.util import pluginInfo
-from Cura.util import removableStorage
-from Cura.util import explorer
+from Cura.gui.tools import imageToMesh, youmagineGui
+from Cura.gui.util import engineResultView, openglGui, openglHelpers, \
+    previewTools
+from Cura.util import explorer, meshLoader, objectScene, pluginInfo, profile, \
+    removableStorage, resources, sliceEngine
 from Cura.util.printerConnection import printerConnectionManager
-from Cura.gui.util import previewTools
-from Cura.gui.util import openglHelpers
-from Cura.gui.util import openglGui
-from Cura.gui.util import engineResultView
-from Cura.gui.tools import youmagineGui
-from Cura.gui.tools import imageToMesh
+import cStringIO as StringIO
+
+
+OpenGL.ERROR_CHECKING = False
+
 
 class SceneView(openglGui.glGuiPanel):
 	def __init__(self, parent):
@@ -276,15 +269,19 @@ class SceneView(openglGui.glGuiPanel):
 				
 				#check if the file is part of the root folder. If so, create folders on sd card to get the same folder hierarchy.
 				repDir = profile.getPreference("sdcard_rootfolder")
-				if os.path.exists(repDir) and os.path.isdir(repDir):
-					repDir = os.path.abspath(repDir)
-					originFilename = os.path.abspath( self._scene._objectList[0].getOriginFilename() )
-					if os.path.dirname(originFilename).startswith(repDir):
-						filename = os.path.splitext(originFilename[len(repDir):])[0] + profile.getGCodeExtension()
-						sdPath = os.path.dirname(os.path.join( drive[1], filename))
-						if not os.path.exists(sdPath):
-							print "Creating replication directory:", sdPath
-							os.makedirs(sdPath)
+				try:
+					if os.path.exists(repDir) and os.path.isdir(repDir):
+						repDir = os.path.abspath(repDir)
+						originFilename = os.path.abspath( self._scene._objectList[0].getOriginFilename() )
+						if os.path.dirname(originFilename).startswith(repDir):
+							new_filename = os.path.splitext(originFilename[len(repDir):])[0] + profile.getGCodeExtension()
+							sdPath = os.path.dirname(os.path.join(drive[1], new_filename))
+							if not os.path.exists(sdPath):
+								print "Creating replication directory:", sdPath
+								os.makedirs(sdPath)
+							filename = new_filename
+				except:
+					pass
 
 				threading.Thread(target=self._saveGCode,args=(drive[1] + filename, drive[1])).start()
 			elif connectionGroup is not None:
@@ -1401,6 +1398,7 @@ class SceneView(openglGui.glGuiPanel):
 				glVertex3f(-w, d, 0)
 				glEnd()
 				glDisable(GL_TEXTURE_2D)
+				glDisable(GL_ALPHA_TEST)
 				glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)
 				glPopMatrix()
 		else:

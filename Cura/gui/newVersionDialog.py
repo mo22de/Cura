@@ -1,9 +1,10 @@
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
 import wx
+
 from Cura.gui import firmwareInstall
-from Cura.util import version
-from Cura.util import profile
+from Cura.util import profile, version
+
 
 class newVersionDialog(wx.Dialog):
 	def __init__(self):
@@ -26,6 +27,12 @@ class newVersionDialog(wx.Dialog):
 		s.Add(wx.StaticText(p, -1, '(This dialog is only shown once)'))
 		s.Add(wx.StaticLine(p), flag=wx.EXPAND|wx.TOP|wx.BOTTOM, border=10)
 		s.Add(wx.StaticText(p, -1, 'New in this version:'))
+		s.Add(wx.StaticText(p, -1, '* Added allspark.cc support'))
+		s.Add(wx.StaticText(p, -1, '* Fixed saving to SD card on MacOS and linux'))
+		s.Add(wx.StaticText(p, -1, '* Fixed Cura not starting up for some Windows users'))
+		s.Add(wx.StaticText(p, -1, '* Fixed UM2 problem where material was not retracted at the end of the print'))
+		s.Add(wx.StaticText(p, -1, '* Fixed UM2 problem where material was not pushed forward after changing material during a pause'))
+		s.Add(wx.StaticText(p, -1, 'New in 15.01:'))
 		s.Add(wx.StaticText(p, -1, '* Improved handling of large 3D models'))
 		s.Add(wx.StaticText(p, -1, '* Added top/bottom speed setting'))
 		s.Add(wx.StaticText(p, -1, '* Improved quickprint profiles (thanks to Paul Candler)'))

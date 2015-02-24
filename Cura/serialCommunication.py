@@ -7,12 +7,13 @@ And handles all communication with the initial process.
 """
 
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
+import json
+import os
 import sys
 import time
-import os
-import json
 
 from Cura.util import machineCom
+
 
 class serialComm(object):
 	"""

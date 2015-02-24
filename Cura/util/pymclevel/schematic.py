@@ -5,10 +5,12 @@ Created on Jul 22, 2011
 '''
 import atexit
 from contextlib import closing
+from logging import getLogger
+from numpy import array, swapaxes, uint8, zeros
 import os
 import shutil
+import tempfile
 import zipfile
-from logging import getLogger
 
 import blockrotation
 from box import BoundingBox
@@ -17,7 +19,7 @@ from level import MCLevel, EntityLevel
 from materials import alphaMaterials, MCMaterials, namedMaterials
 from mclevelbase import exhaust
 import nbt
-from numpy import array, swapaxes, uint8, zeros
+
 
 log = getLogger(__name__)
 
@@ -507,7 +509,6 @@ MCLevel.extractSchematic = extractSchematicFrom
 MCLevel.extractSchematicIter = extractSchematicFromIter
 MCLevel.adjustExtractionParameters = adjustExtractionParameters
 
-import tempfile
 
 
 def extractZipSchematicFrom(sourceLevel, box, zipfilename=None, entities=True):

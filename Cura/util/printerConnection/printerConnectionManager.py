@@ -7,11 +7,10 @@ As well as listing all printers under the right mouse button.
 """
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
-from Cura.util import profile
-from Cura.util import version
-from Cura.util.printerConnection import dummyConnection
-from Cura.util.printerConnection import serialConnection
-from Cura.util.printerConnection import doodle3dConnect
+from Cura.util import profile, version
+from Cura.util.printerConnection import doodle3dConnect, dummyConnection, \
+    serialConnection
+
 
 class PrinterConnectionManager(object):
 	"""

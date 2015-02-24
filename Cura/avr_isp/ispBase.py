@@ -9,6 +9,7 @@ __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AG
 
 import chipDB
 
+
 class IspBase():
 	"""
 	Base class for ISP based AVR programmers.

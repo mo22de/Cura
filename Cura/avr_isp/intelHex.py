@@ -6,6 +6,7 @@ See: http://en.wikipedia.org/wiki/Intel_HEX
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 import io
 
+
 def readHex(filename):
 	"""
 	Read an verify an intel hex file. Return the data as an list of bytes.

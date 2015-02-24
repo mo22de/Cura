@@ -1,20 +1,22 @@
 #!/usr/bin/env python
-import mclevelbase
-import mclevel
-import infiniteworld
-import sys
-import os
-from box import BoundingBox, Vector
-import numpy
-from numpy import zeros, bincount
-import logging
-import itertools
-import traceback
-import shlex
-import operator
 import codecs
-
+import itertools
+import logging
 from math import floor
+from numpy import zeros, bincount
+import numpy
+import operator
+import os
+import shlex
+import sys
+import traceback
+
+from box import BoundingBox, Vector
+import infiniteworld
+import mclevel
+import mclevelbase
+
+
 try:
     import readline  # if available, used by raw_input()
 except:

@@ -1,11 +1,12 @@
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
-import wx
-import power
-import time
-import sys
-import os
 import ctypes
+import os
+import power
+import sys
+import time
+import wx
+
 
 #TODO: This does not belong here!
 if sys.platform.startswith('win'):

@@ -3,13 +3,15 @@ STK500v2 protocol implementation for programming AVR chips.
 The STK500v2 protocol is used by the ArduinoMega2560 and a few other Arduino platforms to load firmware.
 """
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
-import os, struct, sys, time
+import os
+from serial import Serial, SerialException, SerialTimeoutException
+import struct
+import sys
+import time
 
-from serial import Serial
-from serial import SerialException
-from serial import SerialTimeoutException
+import intelHex
+import ispBase
 
-import ispBase, intelHex
 
 class Stk500v2(ispBase.IspBase):
 	def __init__(self):

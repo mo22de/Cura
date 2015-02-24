@@ -18,16 +18,17 @@ http://www.minecraft.net/docs/NBT.txt
 
 Copyright 2010 David Rio Vierra
 """
+from cStringIO import StringIO
 import collections
 import gzip
 import itertools
 import logging
+from numpy import array, zeros, fromstring
+import numpy
 import struct
 import zlib
-from cStringIO import StringIO
 
-import numpy
-from numpy import array, zeros, fromstring
+import nbt_util
 
 
 log = logging.getLogger(__name__)
@@ -548,7 +549,6 @@ def _load_buffer(buf):
 
 __all__ = [a.__name__ for a in tag_classes.itervalues()] + ["load", "gunzip"]
 
-import nbt_util
 
 TAG_Value.__str__ = nbt_util.nested_string
 

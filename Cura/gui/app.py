@@ -1,11 +1,12 @@
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
-import sys
+import glob
 import os
 import platform
 import shutil
-import glob
+import sys
 import warnings
+
 
 try:
 	#Only try to import the _core to save import time

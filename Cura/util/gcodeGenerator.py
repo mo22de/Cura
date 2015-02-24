@@ -8,6 +8,7 @@ import math
 
 from Cura.util import profile
 
+
 class gcodeGenerator(object):
 	"""
 	Generates a simple set of GCode commands for RepRap GCode firmware.

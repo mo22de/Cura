@@ -1,21 +1,19 @@
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
-import wx
+import os
+import re
 import threading
 import time
-import re
-import os
 import types
 import webbrowser
-import cStringIO as StringIO
-
-from Cura.util import profile
-from Cura.util import youmagine
-from Cura.util.meshLoaders import stl
-from Cura.util.meshLoaders import amf
-from Cura.util.resources import getPathForImage
+import wx
 
 from Cura.gui.util import webcam
+from Cura.util import profile, youmagine
+from Cura.util.meshLoaders import amf, stl
+from Cura.util.resources import getPathForImage
+import cStringIO as StringIO
+
 
 DESIGN_FILE_EXT = ['.scad', '.blend', '.max', '.stp', '.step', '.igs', '.iges', '.sldasm', '.sldprt', '.skp', '.iam', '.prt', '.x_t', '.ipt', '.dwg', '.123d', '.wings', '.fcstd', '.top']
 

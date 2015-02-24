@@ -2,13 +2,14 @@
 A helper file to check which parts of the code have documentation and which are lacking documentation.
 This because much of the Cura code is currently undocumented which needs to be improved.
 """
-import os
-import traceback
 import glob
-import sys
 import inspect
-import types
+import os
 import random
+import sys
+import traceback
+import types
+
 
 def treeWalk(moduleList, dirname, fnames):
 	""" Callback from the os.path.walk function, see if the given path is a module and import it to put it in the moduleList """

@@ -1,19 +1,18 @@
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
+import OpenGL
+from OpenGL.GL import *
+from OpenGL.GLU import *
+from OpenGL.GLUT import *
 import math
 import numpy
-import wx
 import time
+import wx
 
 from Cura.util.resources import getPathForImage
 
-import OpenGL
 
 OpenGL.ERROR_CHECKING = False
-from OpenGL.GLUT import *
-from OpenGL.GLU import *
-from OpenGL.GL import *
-from OpenGL.GL import shaders
 glutInit() #Hack; required before glut can be called. Not required for all OS.
 
 class GLReferenceCounter(object):

@@ -1,20 +1,16 @@
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
 import os
-import wx
-import threading
-import sys
-import time
 import serial
+import sys
+import threading
+import time
+import wx
 
-from Cura.avr_isp import stk500v2
-from Cura.avr_isp import ispBase
-from Cura.avr_isp import intelHex
-
+from Cura.avr_isp import intelHex, ispBase, stk500v2
 from Cura.gui.util import taskbar
-from Cura.util import machineCom
-from Cura.util import profile
-from Cura.util import resources
+from Cura.util import machineCom, profile, resources
+
 
 def getDefaultFirmware(machineIndex = None):
 	machine_type = profile.getMachineSetting('machine_type', machineIndex)

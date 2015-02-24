@@ -4,13 +4,14 @@ This is only enabled when you have a development version. And is used for debugg
 """
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
-import threading
 import json
-import httplib as httpclient
-import urllib
+import threading
 import time
+import urllib
 
 from Cura.util.printerConnection import printerConnectionBase
+import httplib as httpclient
+
 
 class dummyConnectionGroup(printerConnectionBase.printerConnectionGroup):
 	"""

@@ -1,9 +1,12 @@
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
-import wx, wx.stc
+import wx
+import wx.stc
 
 from Cura.gui.util import gcodeTextArea
 from Cura.util import profile
+
+
 #Panel to change the start & endcode of the gcode.
 class alterationPanel(wx.Panel):
 	def __init__(self, parent, callback):

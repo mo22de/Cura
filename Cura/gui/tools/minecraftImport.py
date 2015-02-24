@@ -4,14 +4,15 @@ This makes use of the pymclevel module from David Rio Vierra
 """
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
-import wx
 import glob
-import os
 import numpy
+import os
+import wx
 
 from Cura.util import printableObject
 from Cura.util.meshLoaders import stl
 from Cura.util.pymclevel import mclevel
+
 
 def hasMinecraft():
 	return os.path.isdir(mclevel.saveFileDir)

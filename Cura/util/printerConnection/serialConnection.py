@@ -4,17 +4,17 @@ have locking problems where other threads in python can block the USB printing.
 """
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
+import json
+import os
+import platform
+import subprocess
+import sys
 import threading
 import time
-import platform
-import os
-import sys
-import subprocess
-import json
 
-from Cura.util import profile
-from Cura.util import machineCom
+from Cura.util import machineCom, profile
 from Cura.util.printerConnection import printerConnectionBase
+
 
 class serialConnectionGroup(printerConnectionBase.printerConnectionGroup):
 	"""

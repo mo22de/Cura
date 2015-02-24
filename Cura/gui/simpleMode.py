@@ -1,11 +1,11 @@
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
-import wx
-import ConfigParser as configparser
 import os.path
+import wx
 
-from Cura.util import profile
-from Cura.util import resources
+import ConfigParser as configparser
+from Cura.util import profile, resources
+
 
 class simpleModePanel(wx.Panel):
 	"Main user interface window for Quickprint mode"
